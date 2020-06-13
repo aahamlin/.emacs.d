@@ -126,7 +126,7 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-popup-kill-ring)
 
-(require 'init-undo-tree)
+;(require 'init-undo-tree)
 
 (require 'init-discover-my-major)
 
@@ -193,7 +193,7 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-ess)
 
-(require 'init-latex)
+;(require 'init-latex)
 
 (require 'init-buildsystem)
 
@@ -210,26 +210,21 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-erc)
 
-(require 'init-mu4e)
+;(require 'init-mu4e)
 
 (require 'init-tramp)
 
-(require 'init-leetcode)
+;(require 'init-leetcode)
 
 (require 'init-debbugs)
 
-(require 'init-hackernews)
+;(require 'init-hackernews)
 
 (require 'init-eww)
 
 ;; Miscellaneous
-(require 'init-chinese)
 
-(require 'init-games)
-
-(require 'init-epaint)
-
-(require 'init-zone)
+;(require 'init-zone)
 
 ;; InitPrivate
 ;; Load init-private.el if it exists
