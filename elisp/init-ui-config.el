@@ -6,8 +6,8 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 16:12:56 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Wed Dec 25 03:05:11 2019 (-0500)
-;;           By: Mingde (Matthew) Zeng
+;; Last-Updated: Tue Jun  9 10:26:35 2020 (-0400)
+;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d ui
 ;; Compatibility: emacs-version >= 26.1
@@ -41,20 +41,20 @@
   (require 'init-const))
 
 ;; PreSym
-(global-prettify-symbols-mode 1)
-(defun add-pretty-lambda ()
-  "Make some word or string show as pretty Unicode symbols.  See https://unicodelookup.com for more."
-  (setq prettify-symbols-alist
-        '(
-          ("lambda" . 955)
-          ("delta" . 120517)
-          ("epsilon" . 120518)
-          ("->" . 8594)
-          ("<=" . 8804)
-          (">=" . 8805)
-          )))
-(add-hook 'prog-mode-hook 'add-pretty-lambda)
-(add-hook 'org-mode-hook 'add-pretty-lambda)
+;(global-prettify-symbols-mode 1)
+;(defun add-pretty-lambda ()
+;  "Make some word or string show as pretty Unicode symbols.  See https://unicodelookup.com for more."
+;  (setq prettify-symbols-alist
+;        '(
+;          ("lambda" . 955)
+;          ("delta" . 120517)
+;          ("epsilon" . 120518)
+;          ("->" . 8594)
+;          ("<=" . 8804)
+;          (">=" . 8805)
+;          )))
+;(add-hook 'prog-mode-hook 'add-pretty-lambda)
+;(add-hook 'org-mode-hook 'add-pretty-lambda)
 ;; -PreSym
 
 ;; TitleBar

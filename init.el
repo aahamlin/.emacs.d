@@ -6,8 +6,8 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 10:15:28 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Thu Mar 12 17:03:46 2020 (-0400)
-;;           By: Mingde (Matthew) Zeng
+;; Last-Updated: Tue Jun  9 10:19:26 2020 (-0400)
+;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d init
 ;; Compatibility: emacs-version >= 26.1
@@ -128,7 +128,7 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-popup-kill-ring)
 
-(require 'init-undo-tree)
+;(require 'init-undo-tree)
 
 (require 'init-discover-my-major)
 
@@ -196,7 +196,7 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-ess)
 
-(require 'init-latex)
+;(require 'init-latex)
 
 (require 'init-buildsystem)
 
@@ -212,21 +212,21 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-eww)
 
-(require 'init-mu4e)
+;(require 'init-mu4e)
 
 (require 'init-tramp)
 
 (require 'init-pdf)
 
-(require 'init-leetcode)
+;(require 'init-leetcode)
 
-(require 'init-pyim)
+;(require 'init-pyim)
 
-(require 'init-epaint)
+;(require 'init-epaint)
 
-(require 'init-games)
+;(require 'init-games)
 
-(require 'init-zone)
+;(require 'init-zone)
 
 (provide 'init)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
