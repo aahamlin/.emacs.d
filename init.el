@@ -193,6 +193,8 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-ess)
 
+(require 'init-elm)
+
 ;(require 'init-latex)
 
 (require 'init-buildsystem)

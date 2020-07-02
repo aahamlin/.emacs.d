@@ -83,7 +83,10 @@
   (lsp-ui-doc-header t)
   (lsp-ui-doc-include-signature t)
   (lsp-ui-doc-border (face-foreground 'default))
-  (lsp-ui-sideline-enable t)
+  (lsp-ui-doc-position 'top)
+  (lsp-ui-doc-alignment 'window)
+  (lsp-ui-doc-delay 0.4)
+  (lsp-ui-sideline-enable nil)
   (lsp-ui-sideline-ignore-duplicate t)
   (lsp-ui-sideline-show-code-actions nil)
   :config
