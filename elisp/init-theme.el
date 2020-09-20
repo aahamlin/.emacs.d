@@ -5,8 +5,8 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 17:11:56 2019 (-0400)
-;; Version: 2.0.0
-;; Last-Updated: Wed Jun 10 13:07:23 2020 (-0400)
+;; Version: 3.0
+;; Last-Updated: Sun Sep 20 08:35:19 2020 (-0400)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d doom-themes doom-modeline
@@ -53,6 +53,11 @@
   (doom-themes-org-config)
   ;(load-theme 'doom-one t))
   (load-theme 'doom-acario-light t))
+  (defun switch-theme ()
+    "An interactive funtion to switch themes."
+    (interactive)
+    (disable-theme (intern (car (mapcar #'symbol-name custom-enabled-themes))))
+    (call-interactively #'load-theme)))
 ;; -DoomThemes
 
 ;; DoomModeline

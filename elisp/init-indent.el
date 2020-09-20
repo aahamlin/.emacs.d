@@ -5,9 +5,7 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 10:29:56 2019 (-0400)
-;; Version: 2.0.0
-;; Last-Updated: Fri May 15 15:10:58 2020 (-0400)
-;;           By: Mingde (Matthew) Zeng
+;; Version: 3.0
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d highlight-indent-guides indentation
 ;; Compatibility: emacs-version >= 26.1
@@ -37,12 +35,9 @@
 ;;
 ;;; Code:
 
-(eval-when-compile
-  (require 'init-const))
-
 ;; HighLightIndentPac
 (use-package highlight-indent-guides
-  :if *sys/gui*
+  :if (display-graphic-p)
   :diminish
   ;; Enable manually if needed, it a severe bug which potentially core-dumps Emacs
   ;; https://github.com/DarthFennec/highlight-indent-guides/issues/76

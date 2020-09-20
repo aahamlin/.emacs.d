@@ -5,9 +5,7 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Mon Jun 10 18:58:02 2019 (-0400)
-;; Version: 2.0.0
-;; Last-Updated: Wed Mar 11 13:48:21 2020 (-0400)
-;;           By: Mingde (Matthew) Zeng
+;; Version: 3.0
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: lsp-python-ms
 ;; Compatibility: emacs-version >= 26.1
@@ -55,7 +53,7 @@
 ;; LSPPythonPac
 (use-package lsp-python-ms
   :after lsp-mode python
-  :if *python*
+  :if python-p
   :custom
   (lsp-python-executable-cmd "python3"))
 ;; -LSPPythonPac

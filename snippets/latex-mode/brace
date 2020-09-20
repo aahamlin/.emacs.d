@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: brace
+# key: B{
+# --
+\\left$1 $3 \\right$2

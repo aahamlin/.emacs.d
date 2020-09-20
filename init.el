@@ -5,8 +5,8 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 10:15:28 2019 (-0400)
-;; Version: 2.0.0
-;; Last-Updated: Sat Sep  5 19:48:07 2020 (-0400)
+;; Version: 3.0
+;; Last-Updated: Sun Sep 20 08:34:15 2020 (-0400)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d init
@@ -223,6 +223,10 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 ;(require 'init-leetcode)
 
 ;(require 'init-pyim)
+
+(require 'init-input-method)
+
+(require 'init-debbugs)
 
 ;(require 'init-epaint)
 

@@ -5,9 +5,7 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 10:08:22 2019 (-0400)
-;; Version: 2.0.0
-;; Last-Updated: Wed Feb 19 16:28:16 2020 (-0500)
-;;           By: Mingde (Matthew) Zeng
+;; Version: 3.0
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d flycheck
 ;; Compatibility: emacs-version >= 26.1
@@ -37,9 +35,6 @@
 ;;
 ;;; Code:
 
-(eval-when-compile
-  (require 'init-const))
-
 ;; FlyCheckPac
 (use-package flycheck
   :defer t
@@ -53,7 +48,7 @@
   (flycheck-indication-mode 'right-fringe)
   :init
   (use-package flycheck-grammarly :defer t)
-  (if *sys/gui*
+  (if (display-graphic-p)
       (use-package flycheck-posframe
         :custom-face (flycheck-posframe-border-face ((t (:inherit default))))
         :hook (flycheck-mode . flycheck-posframe-mode)

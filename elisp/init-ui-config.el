@@ -5,8 +5,8 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 16:12:56 2019 (-0400)
-;; Version: 2.0.0
-;; Last-Updated: Tue Jun  9 10:26:35 2020 (-0400)
+;; Version: 3.0
+;; Last-Updated: Sun Sep 20 08:34:58 2020 (-0400)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d ui

@@ -5,9 +5,7 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Tue Mar 19 09:20:19 2019 (-0400)
-;; Version: 2.0.0
-;; Last-Updated: Mon Mar  2 15:10:49 2020 (-0500)
-;;           By: Mingde (Matthew) Zeng
+;; Version: 3.0
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d shell shell-here
 ;; Compatibility: emacs-version >= 26.1
@@ -90,7 +88,7 @@
 
 ;; TermKeysPac
 (use-package term-keys
-  :if (not *sys/gui*)
+  :if (not (display-graphic-p))
   :config (term-keys-mode t))
 ;; -TermKeysPac
 
