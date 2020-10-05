@@ -71,6 +71,7 @@
   :custom-face
   (dashboard-banner-logo-title ((t (:family "Love LetterTW" :height 123))))
   :config
+  (setq show-week-agenda-p t)
   (dashboard-modify-heading-icons '((recents . "file-text")
                                     (bookmarks . "book")))
   (dashboard-setup-startup-hook)

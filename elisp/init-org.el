@@ -46,8 +46,8 @@
                              ("C-c ;" . nil))))
   :custom
   (org-log-done 'time)
-  (calendar-latitude 43.65107) ;; Prerequisite: set it to your location, currently default: Toronto, Canada
-  (calendar-longitude -79.347015) ;; Usable for M-x `sunrise-sunset' or in `org-agenda'
+  (calendar-latitude 41.898483) ;; Prerequisite: set it to your location, currently default: Toronto, Canada
+  (calendar-longitude -72.785057) ;; Usable for M-x `sunrise-sunset' or in `org-agenda'
   (org-export-backends (quote (ascii html icalendar latex md odt)))
   (org-use-speed-commands t)
   (org-confirm-babel-evaluate 'nil)

@@ -86,7 +86,11 @@
   (lsp-ui-doc-position 'top)
   (lsp-ui-doc-alignment 'window)
   (lsp-ui-doc-delay 0.4)
+                                        ;
   (lsp-ui-sideline-enable nil)
+  ;(lsp-ui-sideline-show-diagnostics t)
+  ;;(lsp-ui-sideline-show-hover t)
+  (lsp-ui-sideline-update-mode 'line)
   (lsp-ui-sideline-ignore-duplicate t)
   (lsp-ui-sideline-show-code-actions nil)
   :config

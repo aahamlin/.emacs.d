@@ -82,7 +82,10 @@ If all failed, try to complete the common part with `company-complete-common'"
 ;; CompanyLSPPac
 (use-package company-lsp
   :defer t
-  :custom (company-lsp-cache-candidates nil))
+  :custom
+  (company-lsp-cache-candidates nil)
+  (company-lsp-enable-snippet nil)
+  )
 ;; -CompanyLSPPac
 
 
