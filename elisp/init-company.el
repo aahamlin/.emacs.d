@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 10:02:00 2019 (-0400)
 ;; Version: 3.0
-;; Last-Updated: Sun Sep 20 08:36:50 2020 (-0400)
+;; Last-Updated: Sun Sep 20 10:21:46 2020 (-0400)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d company company-tabnine
@@ -82,7 +82,10 @@ If all failed, try to complete the common part with `company-complete-common'"
 ;; CompanyLSPPac
 (use-package company-lsp
   :defer t
-  :custom (company-lsp-cache-candidates nil))
+  :custom
+  (company-lsp-cache-candidates nil)
+  (company-lsp-enable-snippet nil)
+  )
 ;; -CompanyLSPPac
 
 

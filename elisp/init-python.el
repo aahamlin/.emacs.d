@@ -58,6 +58,15 @@
   (lsp-python-executable-cmd "python3"))
 ;; -LSPPythonPac
 
+;; pipenv.el
+(use-package pipenv
+  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended))
+;; -pipenv.el
+
 (provide 'init-python)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init-python.el ends here

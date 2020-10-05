@@ -52,7 +52,7 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config)
   ;(load-theme 'doom-one t))
-  (load-theme 'doom-acario-light t))
+  (load-theme 'doom-acario-light t)
   (defun switch-theme ()
     "An interactive funtion to switch themes."
     (interactive)

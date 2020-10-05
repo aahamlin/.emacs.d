@@ -205,7 +205,7 @@
    Emacs27 introduces =early-init.el=, which is run before =init.el=, before package and UI initialization happens.
 *** Compatibility With 26
     Ensure =emacs-version>=26=, manually require =early-init= configurations if =emacs-version<27=.
-    #+INCLUDE: "~/.emacs.d/init.el" src emacs-lisp :range-begin "CheckVer" :range-end "-CheckVer" :lines "39-51"
+    #+INCLUDE: "~/.emacs.d/init.el" src emacs-lisp :range-begin "CheckVer" :range-end "-CheckVer" :lines "41-53"
 *** Defer Garbage Collection
     Defer garbage collection further back in the startup process, according to [[https://github.com/hlissner/doom-emacs/blob/develop/docs/faq.org#how-does-doom-start-up-so-quickly][hlissner]].
     #+BEGIN_QUOTE
@@ -229,14 +229,14 @@
     A large =gc-cons-threshold= may cause freezing and stuttering during long-term interactive use.
 
     If you experience freezing, decrease this amount, if you increase stuttering, increase this amount.
-    #+INCLUDE: "~/.emacs.d/init.el" src emacs-lisp :range-begin "BetterGC" :range-end "-BetterGC" :lines "54-64"
+    #+INCLUDE: "~/.emacs.d/init.el" src emacs-lisp :range-begin "BetterGC" :range-end "-BetterGC" :lines "56-66"
     Garbage Collect when Emacs is out of focus and avoid garbage collection when using minibuffer.
-    #+INCLUDE: "~/.emacs.d/init.el" src emacs-lisp :range-begin "AutoGC" :range-end "-AutoGC" :lines "67-84"
+    #+INCLUDE: "~/.emacs.d/init.el" src emacs-lisp :range-begin "AutoGC" :range-end "-AutoGC" :lines "69-86"
 ** Load Path
    Since all the configuration files are stored in =elisp/= folder, they need to be added to =load-path= now.
-   #+INCLUDE: "~/.emacs.d/init.el" src emacs-lisp :range-begin "LoadPath" :range-end "-LoadPath"  :lines "87-101"
+   #+INCLUDE: "~/.emacs.d/init.el" src emacs-lisp :range-begin "LoadPath" :range-end "-LoadPath"  :lines "89-103"
 ** Define Constants
-   #+INCLUDE: "~/.emacs.d/elisp/init-const.el" src emacs-lisp :range-begin "Consts" :range-end "-Consts"  :lines "44-77"
+   #+INCLUDE: "~/.emacs.d/elisp/init-const.el" src emacs-lisp :range-begin "Consts" :range-end "-Consts"  :lines "46-79"
 * Package Management
   Some packages are disabled with the =:disabled= tag, because I don't use them very often. You can disable packages similarly yourself too:
   #+begin_src emacs-lisp
@@ -276,7 +276,7 @@
 * Global Functionalities
 ** User Information
    *Prerequisite*: Please update this file your personal info.
-   #+INCLUDE: "~/.emacs.d/elisp/init-const.el" src emacs-lisp :range-begin "UserInfo" :range-end "-UserInfo"" :lines "39-41"
+   #+INCLUDE: "~/.emacs.d/elisp/init-const.el" src emacs-lisp :range-begin "UserInfo" :range-end "-UserInfo"" :lines "41-43"
 ** Bindings
    #+INCLUDE: "~/.emacs.d/elisp/init-global-config.el" src emacs-lisp :range-begin "DefBindings" :range-end "-DefBindings"" :lines "47-62"
 ** Avy
@@ -380,10 +380,10 @@
 * User Interface Enhancements
 ** Doom Themes
    [[https://github.com/hlissner/emacs-doom-themes][Doom Themes]], an UI plugin and pack of themes.
-   #+INCLUDE: "~/.emacs.d/elisp/init-theme.el" src emacs-lisp :range-begin "DoomThemes" :range-end "-DoomThemes" :lines "43-57"
+   #+INCLUDE: "~/.emacs.d/elisp/init-theme.el" src emacs-lisp :range-begin "DoomThemes" :range-end "-DoomThemes" :lines "45-61"
 ** Doom Modeline
    [[https://github.com/seagle0128/doom-modeline][Doom Modeline]], a modeline from DOOM Emacs, but more powerful and faster.
-   #+INCLUDE: "~/.emacs.d/elisp/init-theme.el" src emacs-lisp :range-begin "DoomModeline" :range-end "-DoomModeline" :lines "60-70"
+   #+INCLUDE: "~/.emacs.d/elisp/init-theme.el" src emacs-lisp :range-begin "DoomModeline" :range-end "-DoomModeline" :lines "64-74"
 ** Dashboard
 *** Dashboard
     [[https://github.com/rakanalh/emacs-dashboard][Dashboard]], an extensible Emacs startup screen.
@@ -407,20 +407,20 @@
    #+INCLUDE: "~/.emacs.d/elisp/init-scroll.el" src emacs-lisp :range-begin "SmoothScroll" :range-end "-SmoothScroll" :lines "39-52"
 ** Prettify Symbols
    [[https://www.emacswiki.org/emacs/PrettySymbol][Prettify symbols mode]], a built-in mode for displaying sequences of characters as fancy characters or symbols.
-   #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "PreSym" :range-end "-PreSym" :lines "42-56"
+   #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "PreSym" :range-end "-PreSym" :lines "44-58"
 ** UI Configs
 *** Title Bar
-    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "TitleBar" :range-end "-TitleBar" :lines "59-60"
+    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "TitleBar" :range-end "-TitleBar" :lines "61-62"
 *** Simplify Yes/No Prompts
-    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "YorN" :range-end "-YorN" :lines "63-64"
+    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "YorN" :range-end "-YorN" :lines "65-66"
 *** Disable Splash Screen
-    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "StartupScreen" :range-end "-StartupScreen" :lines "67-70"
+    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "StartupScreen" :range-end "-StartupScreen" :lines "69-72"
 *** Line Numbers
     Display line numbers, and column numbers in modeline.
-    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "DisLineNum" :range-end "-DisLineNum" :lines "73-80"
+    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "DisLineNum" :range-end "-DisLineNum" :lines "75-82"
 *** Modeline Time and Battery
     Display time and battery information in modeline.
-    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "DisTimeBat" :range-end "-DisTimeBat" :lines "83-85"
+    #+INCLUDE: "~/.emacs.d/elisp/init-ui-config.el" src emacs-lisp :range-begin "DisTimeBat" :range-end "-DisTimeBat" :lines "85-87"
 * General Programming
 ** Magit
    [[https://magit.vc/][Magit]], an interface to the version control system Git.
@@ -500,26 +500,26 @@
 *** LSP Mode
     [[https://github.com/emacs-lsp/lsp-mode][Language Server Protocol Mode]], a client/library for the [[https://microsoft.github.io/language-server-protocol/][Language Server Protocol]]. M-EMACS tries to use lsp-mode whenever possible.
 
-    #+INCLUDE: "~/.emacs.d/elisp/init-lsp.el" src emacs-lisp :range-begin "LSPPac" :range-end "-LSPPac" :lines "39-52"
+    #+INCLUDE: "~/.emacs.d/elisp/init-lsp.el" src emacs-lisp :range-begin "LSPPac" :range-end "-LSPPac" :lines "41-56"
 *** LSP UI
     [[https://github.com/emacs-lsp/lsp-ui][Language Server Protocol UI]], provides all the higher level UI modules of lsp-mode, like flycheck support and code lenses.
 
     Note: =lsp-ui-doc= is too annoying, so it will not be triggered upon hovering. You have to toggle it using =M-i=.
-    #+INCLUDE: "~/.emacs.d/elisp/init-lsp.el" src emacs-lisp :range-begin "LSPUI" :range-end "-LSPUI" :lines "55-86"
+    #+INCLUDE: "~/.emacs.d/elisp/init-lsp.el" src emacs-lisp :range-begin "LSPUI" :range-end "-LSPUI" :lines "59-98"
 ** DAP
    [[https://github.com/emacs-lsp/dap-mode][Debug Adapter Protocol Mode]], a client/library for the [[https://code.visualstudio.com/api/extension-guides/debugger-extension][Debug Adapter Protocol]].
 
    *Prerequisite*: See [[https://github.com/emacs-lsp/dap-mode#configuration][Configuration]] to configure DAP appropriately.
-   #+INCLUDE: "~/.emacs.d/elisp/init-lsp.el" src emacs-lisp :range-begin "DAPPac" :range-end "-DAPPac" :lines "89-99"
+   #+INCLUDE: "~/.emacs.d/elisp/init-lsp.el" src emacs-lisp :range-begin "DAPPac" :range-end "-DAPPac" :lines "101-111"
 ** Company
 *** Company Mode
     [[http://company-mode.github.io/][Company]], a text completion framework for Emacs.
 
     The function =smarter-yas-expand-next-field-complete= is to smartly resolve TAB conflicts in company and yasnippet packages.
-    #+INCLUDE: "~/.emacs.d/elisp/init-company.el" src emacs-lisp :range-begin "ComPac" :range-end "-ComPac" :lines "42-78"
+    #+INCLUDE: "~/.emacs.d/elisp/init-company.el" src emacs-lisp :range-begin "ComPac" :range-end "-ComPac" :lines "44-80"
 *** Company LSP
     [[https://github.com/tigersoldier/company-lsp][Company LSP]], a Company completion backend for lsp-mode.
-    #+INCLUDE: "~/.emacs.d/elisp/init-company.el" src emacs-lisp :range-begin "CompanyLSPPac" :range-end "-CompanyLSPPac" :lines "81-84"
+    #+INCLUDE: "~/.emacs.d/elisp/init-company.el" src emacs-lisp :range-begin "CompanyLSPPac" :range-end "-CompanyLSPPac" :lines "83-89"
 *** Company TabNine
     [[https://github.com/TommyX12/company-tabnine][Company TabNine]], A company-mode backend for [[https://tabnine.com/][TabNine]], the all-language autocompleter.
 
@@ -728,3 +728,4 @@
 ** Zone
    [[https://www.emacswiki.org/emacs/ZoneMode][Zone]], a minor-mode 'zones' Emacs out, choosing one of its random modes to obfuscate the current buffer.
    #+INCLUDE: "~/.emacs.d/elisp/init-zone.el" src emacs-lisp :range-begin "ZonePac" :range-end "-ZonePac" :lines "39-53"
+   
