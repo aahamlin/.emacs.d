@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 10:15:28 2019 (-0400)
 ;; Version: 3.0
-;; Last-Updated: Sun Sep 20 08:34:15 2020 (-0400)
+;; Last-Updated: Fri Oct 23 15:36:34 2020 (-0400)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d init
@@ -214,7 +214,7 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-eww)
 
-;(require 'init-mu4e)
+(require 'init-mu4e)
 
 (require 'init-tramp)
 

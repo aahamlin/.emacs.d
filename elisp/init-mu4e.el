@@ -35,6 +35,9 @@
 ;;
 ;;; Code:
 
+(eval-when-compile
+  (require 'init-const))
+
 ;; Mu4ePac
 (use-package mu4e
   :ensure nil
@@ -70,8 +73,8 @@
   (mu4e-confirm-quit nil)
   (mu4e-use-fancy-chars t)
   (mu4e-view-use-gnus t)
-  (gnus-icalendar-org-capture-file "~/org/agenda/meetings.org") ; Prerequisite: set it to meetings org fie
-  (gnus-icalendar-org-capture-headline '("Meetings")) ; Make sure to create Calendar heading first
+  ;(gnus-icalendar-org-capture-file "~/org/agenda/meetings.org") ; Prerequisite: set it to meetings org fie
+  ;(gnus-icalendar-org-capture-headline '("Meetings")) ; Make sure to create Calendar heading first
   :hook
   ((mu4e-view-mode . visual-line-mode)
    (mu4e-compose-mode . (lambda ()
@@ -90,9 +93,9 @@
                                   (:thread-subject . ,(- (window-body-width) 70)) ;; alternatively, use :subject
                                   (:size . 7))))))
   :config
-  (require 'mu4e-icalendar)
-  (mu4e-icalendar-setup)
-  (gnus-icalendar-org-setup)
+  ;(require 'mu4e-icalendar)
+  ;(mu4e-icalendar-setup)
+  ;(gnus-icalendar-org-setup)
   (defalias 'mu4e-add-attachment 'mail-add-attachment
     "I prefer the add-attachment function to begin wih mu4e so I can find it easily.")
   (setq mail-user-agent (mu4e-user-agent))
@@ -113,13 +116,13 @@
                   (mu4e-trash-folder . "/gmail/[email].Trash")
                   (mu4e-sent-messages-behavior . sent)
                   (mu4e-compose-signature . user-full-name)
-                  (user-mail-address . user-mail-address) ; Prerequisite: Set this to your email
+                  ;(user-mail-address . user-mail-address) ; Prerequisite: Set this to your email
                   (mu4e-compose-format-flowed . t)
                   (smtpmail-queue-dir . "~/Maildir/gmail/queue/cur")
                   (message-send-mail-function . smtpmail-send-it)
-                  (smtpmail-smtp-user . "matthewzmd") ; Set to your username
+                  (smtpmail-smtp-user . "aahamlin") ; Set to your username
                   (smtpmail-starttls-credentials . (("smtp.gmail.com" 587 nil nil)))
-                  (smtpmail-auth-credentials . (expand-file-name "~/.authinfo.gpg"))
+                  (smtpmail-auth-credentials . (expand-file-name "~/authinfo.gpg"))
                   (smtpmail-default-smtp-server . "smtp.gmail.com")
                   (smtpmail-smtp-server . "smtp.gmail.com")
                   (smtpmail-smtp-service . 587)
