@@ -37,6 +37,7 @@
 
 ;; UserInfo
 (setq user-full-name "Andrew Hamlin")
+;(setq user-smtp-user "aahamlin") ; figure out how to use this with smtp command
 (setq user-mail-address "aahamlin@gmail.com")
 ;; -UserInfo
 
