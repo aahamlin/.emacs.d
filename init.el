@@ -195,6 +195,8 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-elm)
 
+(require 'init-dart)
+
 ;(require 'init-latex)
 
 (require 'init-buildsystem)
