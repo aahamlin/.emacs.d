@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Mon Mar 18 14:20:54 2019 (-0400)
 ;; Version: 3.0
-;; Last-Updated: Fri Oct 23 21:38:56 2020 (-0400)
+;; Last-Updated: Wed Jan 13 09:49:24 2021 (-0500)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d constants
@@ -40,7 +40,7 @@
 ;; UserInfo
 (setq user-full-name "Andrew Hamlin")
 ;(setq user-smtp-user "aahamlin") ; figure out how to use this with smtp command
-(setq user-mail-address "aahamlin@gmail.com")
+(setq user-mail-address "andrew@gozynta.com")
 ;; -UserInfo
 
 ;; Consts
