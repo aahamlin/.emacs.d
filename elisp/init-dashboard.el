@@ -50,8 +50,9 @@
   (dashboard-banner-logo-title "Close the world. Open the nExt.")
   (dashboard-startup-banner (expand-file-name "images/KEC_Dark_BK_Small.png" user-emacs-directory))
   (dashboard-items '((recents  . 7)
-                     (bookmarks . 7)
-                     (agenda . 5)))
+                     (projects . 5)
+                     (agenda . 10)
+                     (registers . 5)))
   (initial-buffer-choice (lambda () (get-buffer dashboard-buffer-name)))
   (dashboard-set-heading-icons t)
   (dashboard-set-navigator t)
@@ -71,8 +72,11 @@
   :custom-face
   (dashboard-banner-logo-title ((t (:family "Love LetterTW" :height 123))))
   :config
-  (setq show-week-agenda-p t)
+  (setq dashboard-week-agenda t)
+  (setq dashboard-projects-backend 'projectile)
+  (setq dashboard-center-content t)
   (dashboard-modify-heading-icons '((recents . "file-text")
+                                    (projects . "tools")
                                     (bookmarks . "book")))
   (dashboard-setup-startup-hook)
   ;; Open Dashboard function
