@@ -57,6 +57,8 @@
   (org-todo-keywords
    '((sequence "TODO" "IN-PROGRESS" "REVIEW" "|" "DONE" "CANCELED")))
   (org-agenda-window-setup 'other-window)
+  (org-export-with-sub-superscripts '{})
+  (org-support-shift-select t)
   (org-latex-pdf-process
    '("pdflatex -shelnl-escape -interaction nonstopmode -output-directory %o %f"
      "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
