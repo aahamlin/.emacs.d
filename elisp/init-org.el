@@ -57,6 +57,8 @@
   (org-todo-keywords
    '((sequence "TODO" "IN-PROGRESS" "ON-HOLD" "REVIEW" "QUEUE" "|" "DONE" "CANCELED")))
   (org-agenda-window-setup 'other-window)
+  (org-export-with-sub-superscripts '{})
+  (org-support-shift-select t)
   :hook (org-mode .
                   (lambda ()
                     (add-hook 'after-save-hook #'my-git-commit-and-push nil 'local)))
