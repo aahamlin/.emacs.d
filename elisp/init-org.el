@@ -73,11 +73,12 @@
     (require 'org-tempo))
   (when (file-directory-p "~/org/agenda/")
     (setq org-agenda-files (list "~/org/agenda/")))
-
+  (setq async-shell-command-buffer 'new-buffer)
+ 
   (defun my-git-commit-and-push ()
     "Commit and push changed files in org agenda directory"
-    (shell-command
-     (format "git add -A ~/org/; git commit -m '%s'; git pull -r; git push &"
+    (async-shell-command
+     (format "git add -A ~/org/; git commit -m '%s'; git pull -r; git push;"
              (format-time-string "%Y%m%dT%T"))))
 
   (defun org-export-toggle-syntax-highlight ()
