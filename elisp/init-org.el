@@ -69,12 +69,12 @@
   (when (file-directory-p "~/org/agenda/")
     (setq org-agenda-files (list "~/org/agenda/")))
   (setq async-shell-command-buffer 'new-buffer)
- 
+
   (defun my-git-commit-and-push ()
     "Commit and push changed files in org agenda directory"
     (async-shell-command
-     (format "git add -A ~/org/; git commit -m '%s'; git pull -r; git push;"
-             (format-time-string "%Y%m%dT%T"))))
+     (format "until [ -e ~/org/.shell-running ]; do sleep 1; done; git add -A ~/org/; git commit -m 'Notes updated %s'; git pull -r; git push; rm -fv ~/org/.shell-running"
+             (format-time-string "%Y-%m-%dT%T"))))
 
   (defun org-export-turn-on-syntax-highlight ()
     "Setup variables to turn on syntax highlighting when calling `org-latex-export-to-pdf'."
