@@ -73,7 +73,7 @@
   (defun my-git-commit-and-push ()
     "Commit and push changed files in org agenda directory"
     (async-shell-command
-     (format "until [ -e ~/org/.shell-running ]; do sleep 1; done; git add -A ~/org/; git commit -m 'Notes updated %s'; git pull -r; git push; rm -fv ~/org/.shell-running"
+     (format "while [ -e ~/org/.shell-running ]; do sleep 1; done; touch ~/org/.shell-running; git add -A ~/org/; git commit -m 'Notes updated %s'; git pull -r; git push; rm -fv ~/org/.shell-running"
              (format-time-string "%Y-%m-%dT%T"))))
 
   (defun org-export-turn-on-syntax-highlight ()
