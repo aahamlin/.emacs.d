@@ -160,6 +160,12 @@ The original function deletes trailing whitespace of the current line."
 
 (setq-default compilation-scroll-output t)
 
+
+;; useful visual indicators
+(global-display-fill-column-indicator-mode)
+(global-display-line-numbers-mode)
+
+
 ;; ad-handle-definition warnings are generated when functions are redefined with `defadvice',
 ;; they are not helpful.
 (setq ad-redefinition-action 'accept)
