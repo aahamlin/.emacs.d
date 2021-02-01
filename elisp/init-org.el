@@ -68,12 +68,11 @@
     (require 'org-tempo))
   (when (file-directory-p "~/org/agenda/")
     (setq org-agenda-files (list "~/org/agenda/")))
-  (setq async-shell-command-buffer 'new-buffer)
 
   (defun my-git-commit-and-push ()
     "Commit and push changed files in org agenda directory"
-    (async-shell-command
-     (format "NEXT_WAIT_TIME=0; cd ~/org; while [ -e .shell-running && $NEXT_WAIT_TIME -ne 3 ]; do sleep $(( NEXT_WAIT_TIME++ )); done; touch .shell-running; git add -A .; git commit -m 'Notes updated %s';git stash; git pull -r; git push; git stash apply stash@{0}; rm -fv .shell-running"
+    (shell-command
+     (format "NEXT_WAIT_TIME=0; cd ~/org; while [ -e .shell-running && $NEXT_WAIT_TIME -ne 3 ]; do sleep $(( NEXT_WAIT_TIME++ )); done; touch .shell-running; git add -A .; git commit -m 'Notes updated %s'; git stash; git pull -r; git push; git stash apply stash@{0}; rm -fv .shell-running"
              (format-time-string "%Y-%m-%dT%T"))))
 
   (defun org-export-turn-on-syntax-highlight ()
