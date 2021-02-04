@@ -163,6 +163,8 @@ The original function deletes trailing whitespace of the current line."
 
 ;; useful visual indicators
 (global-display-fill-column-indicator-mode)
+(add-hook 'dashboard-mode-hook (lambda ()
+          (setq display-fill-column-indicator-column nil)))
 (global-display-line-numbers-mode)
 
 
