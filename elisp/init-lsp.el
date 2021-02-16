@@ -34,6 +34,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;; Code:
+(require 'exec-path-from-shell)
 
 ;; LSPPac
 (use-package lsp-mode
@@ -50,6 +51,8 @@
   (lsp-eldoc-hook nil)
   :config
   (setq lsp-enable-symbol-highlighting nil)
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize))
   :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
   :hook ((java-mode python-mode go-mode elm-mode
           js-mode js2-mode typescript-mode web-mode
