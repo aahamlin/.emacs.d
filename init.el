@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 10:15:28 2019 (-0400)
 ;; Version: 3.0
-;; Last-Updated: Sat Nov 21 17:36:49 2020 (-0500)
+;; Last-Updated: Tue Feb 16 16:02:20 2021 (-0500)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d init
@@ -212,7 +212,7 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-eaf)
 
-(require 'init-erc)
+;(require 'init-erc)
 
 (require 'init-eww)
 

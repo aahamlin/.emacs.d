@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 10:42:09 2019 (-0400)
 ;; Version: 3.0
-;; Last-Updated: Wed Sep 23 09:48:12 2020 (-0400)
+;; Last-Updated: Tue Feb 16 16:02:20 2021 (-0500)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d lsp
@@ -36,6 +36,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;; Code:
+(require 'exec-path-from-shell)
 
 ;; LSPPac
 (use-package lsp-mode
@@ -49,6 +50,8 @@
   (lsp-eldoc-hook nil)
   :config
   (setq lsp-enable-symbol-highlighting nil)
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize))
   :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
   :hook ((java-mode python-mode go-mode elm-mode
           js-mode js2-mode typescript-mode web-mode
