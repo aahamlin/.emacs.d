@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: eqn
+# name: equation
 # key: eqn
 # --
 \\begin{align*}

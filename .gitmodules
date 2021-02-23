@@ -34,6 +34,6 @@
 [submodule "site-elisp/aweshell"]
 	path = site-elisp/aweshell
 	url = https://github.com/MatthewZMD/aweshell.git
-[submodule "site-elisp/org-latex-instant-preview"]
-	path = site-elisp/org-latex-instant-preview
-	url = https://github.com/yangsheng6810/org-latex-instant-preview.git
+[submodule "site-elisp/snow.el"]
+	path = site-elisp/snow.el
+	url = https://github.com/alphapapa/snow.el.git
