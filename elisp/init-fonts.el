@@ -37,7 +37,7 @@
 
 ;; FontsList
 ;; Input Mono, Monaco Style, Line Height 1.3 download from http://input.fontbureau.com/
-(defvar font-list '(("Input" . 11) ("Ubuntu Mono" . 12) ("Consolas" . 12) ("Love LetterTW" . 13) ("Source Code Pro" . 11) ("Anonymous Pro" . 11))
+(defvar font-list '(("Anonymous Pro" . 10) ("Input" . 10) ("Ubuntu Mono" . 11) ("Consolas" . 11) ("Love LetterTW" . 12) ("Source Code Pro" . 10))
   "List of fonts and sizes.  The first one available will be used.")
 ;; -FontsList
 
