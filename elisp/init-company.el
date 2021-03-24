@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 10:02:00 2019 (-0400)
 ;; Version: 3.0
-;; Last-Updated: Sun Sep 20 10:21:46 2020 (-0400)
+;; Last-Updated: Wed Mar 24 08:36:14 2021 (-0400)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d company company-tabnine
@@ -79,23 +79,14 @@ If all failed, try to complete the common part with `company-complete-common'"
             (company-complete-common))))))
 ;; -ComPac
 
-;; CompanyLSPPac
-(use-package company-lsp
-  :defer t
-  :custom
-  (company-lsp-cache-candidates nil)
-  (company-lsp-enable-snippet nil)
-  )
-;; -CompanyLSPPac
-
-
 ;; CompanyBoxPac
 (use-package company-box
   :diminish
+  :if (display-graphic-p)
   :defines company-box-icons-all-the-icons
   :hook (company-mode . company-box-mode)
-  :init (setq company-box-backends-colors nil
-              company-box-highlight-prefix t)
+  :custom
+  (company-box-backends-colors nil)
   :config
   (with-no-warnings
     ;; Prettify icons

@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 10:42:09 2019 (-0400)
 ;; Version: 3.0
-;; Last-Updated: Tue Feb 16 16:02:20 2021 (-0500)
+;; Last-Updated: Wed Mar 24 08:34:30 2021 (-0400)
 ;;           By: Andrew Hamlin
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d lsp
@@ -49,7 +49,7 @@
   (read-process-output-max (* 1024 1024))
   (lsp-eldoc-hook nil)
   :config
-  (setq lsp-enable-symbol-highlighting nil)
+  ;(setq lsp-enable-symbol-highlighting nil)
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
   :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
@@ -79,14 +79,13 @@
   (lsp-ui-doc-header t)
   (lsp-ui-doc-include-signature t)
   (lsp-ui-doc-border (face-foreground 'default))
-  (lsp-ui-doc-position 'top)
-  (lsp-ui-doc-alignment 'window)
-  (lsp-ui-doc-delay 0.4)
-                                        ;
+  ;;(lsp-ui-doc-position 'top)
+  ;;(lsp-ui-doc-alignment 'window)
+  ;;(lsp-ui-doc-delay 0.4)
   (lsp-ui-sideline-enable nil)
-  ;(lsp-ui-sideline-show-diagnostics t)
+  ;;(lsp-ui-sideline-show-diagnostics t)
   ;;(lsp-ui-sideline-show-hover t)
-  (lsp-ui-sideline-update-mode 'line)
+  ;;(lsp-ui-sideline-update-mode 'line)
   (lsp-ui-sideline-ignore-duplicate t)
   (lsp-ui-sideline-show-code-actions nil)
   :config
