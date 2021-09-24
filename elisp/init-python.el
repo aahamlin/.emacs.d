@@ -37,7 +37,18 @@
 
 (eval-when-compile
   (require 'init-syntax)
+  ;(require 'init-flycheck)
+  (require 'dap-python)
   (require 'init-const))
+
+(dap-register-debug-template "dap-debug-script"
+                             (list :type "python"
+                                   :cwd (lsp-workspace-root)
+                                   :request "attach"
+                                   :host "localhost"
+                                   :port "5678"
+                                   :debugger 'debugpy
+                                   :name "dap-debug-script"))
 
 ;; PythonConfig
 (use-package python-mode
